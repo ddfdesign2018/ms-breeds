@@ -59,4 +59,9 @@ public class BreedResource {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @RequestMapping(value = "breedList", method = RequestMethod.GET)
+    public List<BreedDTO> getAllBreedsList() {
+        List<BreedDTO> listaBreeds = gestionBreeds.getAllBreeds();
+        return listaBreeds;
+    }
 }
